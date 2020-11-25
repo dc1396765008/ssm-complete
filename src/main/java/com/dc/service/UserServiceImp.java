@@ -7,9 +7,10 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+
 @Service
 public class UserServiceImp implements UserService {
-//    userDao
+    //    userDao
     @Autowired
     public UserDao userDao;
 
@@ -26,23 +27,23 @@ public class UserServiceImp implements UserService {
     }
 
     public int add(UserBean userBean) {
-                return userDao.add(userBean);
-            }
+        return userDao.add(userBean);
+    }
 
-            public int deleteById(int id) {
-                return userDao.deleteById(id);
-            }
+    public int deleteById(int id) {
+        return userDao.deleteById(id);
+    }
 
-            public int update(UserBean userBean) {
-                return userDao.update(userBean);
-            }
+    public int update(UserBean userBean) {
+        return userDao.update(userBean);
+    }
 
-            public UserBean queryById(int id) {
-                return userDao.queryById(id);
-            }
+    public UserBean queryById(int id) {
+        return userDao.queryById(id);
+    }
 
-            public List<UserBean> queryAll() {
-                System.out.println(userDao);
-                return userDao.queryAll();
-            }
+    public List<UserBean> queryAll() {
+        System.out.println(userDao);
+        return userDao.queryAll();
+    }
 }

@@ -6,7 +6,7 @@
     <!--增加一个-->
     <insert id="add" parameterType="com.dc.bean.UserBean">
         insert into user (username,password)
-        values (#{username}, #{password}, )
+        values (#{username}, #{password})
     </insert>
     <!--根据id删除一个-->
     <delete id="deleteById" parameterType="int">

@@ -34,5 +34,13 @@
         <!-- 后缀 -->
         <property name="suffix" value=".jsp" />
     </bean>
+<!--    拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+<!--            /当前一个  /*当前所有 /**所有-->
+            <mvc:mapping path="/**"/>
+            <bean class="com.dc.interceptor.MyInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

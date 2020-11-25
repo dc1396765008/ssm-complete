@@ -12,18 +12,18 @@ import java.util.List;
 
 @Controller
 public class User {
-//    userServiceImp
+    //    userServiceImp
     @Autowired
-     private  UserService userService;
+    private UserService userService;
 
     @RequestMapping(value = "/user")
-    public String sayHello(Model model){
+    public String sayHello(Model model) {
+        //需要数据库
         List<UserBean> userBeans = userService.queryAll();
-
-
         //向模型中添加属性msg与值，可以在JSP页面中取出并渲染
-        model.addAttribute("msg",userBeans);
+        model.addAttribute("msg", userBeans);
         //web-inf/jsp/hello.jsp
+        System.out.println("执行了/user");
         return "User";
     }
 }
